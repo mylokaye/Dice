@@ -16,32 +16,26 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var diceImageView2: UIImageView!
     
+    
 
-    override func viewDidLoad() {
+        //When pressed
+    @IBAction func rollButtonPressed(_ sender: UIButton) {
         
         
+        //Choose random image
+        
+        let diceArray = [#imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")]
+        
+        
+        //Each view shows image from array
+        
+        
+        diceImageView1.image = diceArray.randomElement()
+        diceImageView2.image = diceArray.randomElement()
 
         
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        
-        
-        
-        //Image One
-        
-        diceImageView1.image = UIImage(imageLiteralResourceName: "DiceSix" )
-        
-        diceImageView1.alpha = 0.5 ;
-        
-        
-        //Image Two
-        
-        diceImageView2.image = UIImage(imageLiteralResourceName: "DiceTwo")
-        
-        
-        //who I want to change and what I want to change to ]
-        
+                            
     }
 
 
